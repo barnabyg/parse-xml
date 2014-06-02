@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.blizzardtec.parsexml;
 
@@ -17,13 +17,13 @@ public final class ParseXMLTest {
      * Test XML file.
      */
     private static final String FILENAME =
-        "c:\\\\docs\\workspace\\ParseXML\\src\\test\\resources\\test1.xml";
+        "c:\\\\docs\\git\\parse-xml\\src\\test\\resources\\test1.xml";
 
     /**
      * Output file after parsing.
      */
     private static final String OUT_FILENAME =
-        "c:\\\\docs\\workspace\\ParseXML\\src\\test\\resources\\output.xml";
+        "c:\\\\docs\\git\\parse-xml\\src\\test\\resources\\output.xml";
 
     /**
      * Test the loading of an XML file.

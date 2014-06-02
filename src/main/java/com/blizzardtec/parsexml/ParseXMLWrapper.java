@@ -32,21 +32,22 @@ public final class ParseXMLWrapper {
      * @param args arguments
      */
     public static void main(final String[] args) {
+
+        boolean flag = true;
+
         if (args.length < 2) {
             System.out.println("ParseXML <" + PROJECT + "> <file name>");
             System.out.println("ParseXML" + " <"
                     + CRUISECONTROL
                     + "> <file name> <project name> <Maven base dir>");
-            System.exit(1);
-        }
-
-        if (PROJECT.equalsIgnoreCase(args[0])) {
+            flag = false;
+        } else if (PROJECT.equalsIgnoreCase(args[0])) {
             // make sure the correct number of arguments were passed
             if (args.length != 2) {
                 System.out.println(
                         "Invalid number of arguments for"
                         + " project file modification");
-                System.exit(1);
+                flag = false;
             }
 
             doProject(args[1]);
@@ -57,10 +58,12 @@ public final class ParseXMLWrapper {
                 System.out.println(
                         "Invalid number of args for"
                         + " cruisecontrol file modification");
-                System.exit(1);
+                flag = false;
             }
 
-            doCruisecontrol(args[1], args[2], args[3]);
+            if (flag) {
+                doCruisecontrol(args[1], args[2], args[3]);
+            }
         }
     }
 
@@ -75,7 +78,6 @@ public final class ParseXMLWrapper {
             parser.saveXMLFile(filename);
         } catch (ParseXMLException pxe) {
             System.out.println(pxe.getMessage());
-            System.exit(1);
         }
     }
 
@@ -94,7 +96,6 @@ public final class ParseXMLWrapper {
             parser.saveXMLFile(filename);
         } catch (ParseXMLException pxe) {
             System.out.println(pxe.getMessage());
-            System.exit(1);
         }
     }
 }
