@@ -9,8 +9,15 @@
 	<name>parse-xml</name>
 	<url>http://maven.apache.org</url>
 
+  <prerequisites>
+    <maven>3.0.1</maven>
+  </prerequisites>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <cobertura.version>2.6</cobertura.version>
+    <pmd.version>3.1</pmd.version>
+    <checkstyle.version>2.12.1</checkstyle.version>
 	</properties>
 
 	<dependencies>
@@ -27,7 +34,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
-				<version>2.5</version>
+				<version>${pmd.version}</version>
 				<configuration>
 					<targetJdk>1.6</targetJdk>
 					<rulesets>
@@ -52,7 +59,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>2.6</version>
+				<version>${checkstyle.version}</version>
 				<configuration>
 					<failsOnError>true</failsOnError>
 					<violationSeverity>warning</violationSeverity>
@@ -73,10 +80,12 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<artifactId>maven-compiler-plugin</artifactId>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>2.3.2</version>
 					<configuration>
-						<source>1.6</source>
-						<target>1.6</target>
+						<source>1.8</source>
+						<target>1.8</target>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -97,7 +106,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
-				<version>2.5</version>
+				<version>${pmd.version}</version>
 				<configuration>
 					<targetJdk>1.6</targetJdk>
 					<rulesets>
@@ -108,7 +117,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>2.6</version>
+				<version>${checkstyle.version}</version>
 				<configuration>
 					<configLocation>c:\docs\git\settings\barnaby-checkstyle-config.xml</configLocation>
 				</configuration>

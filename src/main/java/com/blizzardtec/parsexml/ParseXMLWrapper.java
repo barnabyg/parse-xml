@@ -9,15 +9,7 @@ package com.blizzardtec.parsexml;
  * @author bob
  *
  */
-@SuppressWarnings("PMD.SystemPrintln")
 public final class ParseXMLWrapper {
-
-    /**
-     * Private constructor.
-     */
-    private ParseXMLWrapper() {
-
-    }
 
     /**
      * Project mode.
@@ -27,6 +19,13 @@ public final class ParseXMLWrapper {
      * Cruisecontrol mode.
      */
     private static final String CRUISECONTROL = "cruisecontrol";
+
+    /**
+     * Private constructor.
+     */
+    private ParseXMLWrapper() {
+
+    }
 
     /**
      * @param args arguments
