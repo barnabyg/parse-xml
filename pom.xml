@@ -38,7 +38,7 @@
 				<configuration>
 					<targetJdk>1.6</targetJdk>
 					<rulesets>
-						<ruleset>c:\docs\git\settings\barnaby-pmd-config.xml</ruleset>
+						<ruleset>${basedir}/src/main/resources/barnaby-pmd-config.xml</ruleset>
 					</rulesets>
 					<failurePriority>4</failurePriority>
 					<verbose>false</verbose>
@@ -64,7 +64,7 @@
 					<failsOnError>true</failsOnError>
 					<violationSeverity>warning</violationSeverity>
 					<consoleOutput>true</consoleOutput>
-					<configLocation>c:\docs\git\settings\barnaby-checkstyle-config.xml</configLocation>
+					<configLocation>${basedir}/src/main/resources/barnaby-checkstyle-config.xml</configLocation>
           <excludes>**/output.xml</excludes>
 				</configuration>
 				<executions>
@@ -110,7 +110,7 @@
 				<configuration>
 					<targetJdk>1.6</targetJdk>
 					<rulesets>
-						<ruleset>c:\docs\git\settings\barnaby-pmd-config.xml</ruleset>
+						<ruleset>${basedir}/src/main/resources/barnaby-pmd-config.xml</ruleset>
 					</rulesets>
 				</configuration>
 			</plugin>
@@ -119,7 +119,7 @@
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>${checkstyle.version}</version>
 				<configuration>
-					<configLocation>c:\docs\git\settings\barnaby-checkstyle-config.xml</configLocation>
+					<configLocation>${basedir}/src/main/resources/barnaby-checkstyle-config.xml</configLocation>
 				</configuration>
 			</plugin>
 		</plugins>
