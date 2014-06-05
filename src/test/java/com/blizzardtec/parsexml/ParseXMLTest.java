@@ -17,13 +17,13 @@ public final class ParseXMLTest {
      * Test XML file.
      */
     private static final String FILENAME =
-        "c:\\\\docs\\git\\parse-xml\\src\\test\\resources\\test1.xml";
+        "src/test/resources/test1.xml";
 
     /**
      * Output file after parsing.
      */
     private static final String OUT_FILENAME =
-        "c:\\\\docs\\git\\parse-xml\\src\\test\\resources\\output.xml";
+        "src/test/resources/output.xml";
 
     /**
      * Test the loading of an XML file.
